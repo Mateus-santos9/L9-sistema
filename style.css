@@ -1,0 +1,208 @@
+/* Layout geral */
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Cor de fundo mais clara */
+}
+
+/* Barra Principal */
+.barra-principal {
+    width: 225px;
+    height: 100vh;
+    background: linear-gradient(to bottom, #003366, #004d99); /* Gradiente de cor */
+    padding: 20px;
+    color: white;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 0 10px 10px 0; /* Borda arredondada no canto direito */
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1); /* Sombras leves para dar profundidade */
+}
+
+/* Título na Barra */
+.barra-principal h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Links na Barra Principal */
+.barra-principal a {
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px; /* Borda arredondada */
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Efeito de Hover nos Links */
+.barra-principal a:hover {
+    background-color: #006bb3; /* Cor de fundo mais clara */
+    padding-left: 20px; /* Adiciona um efeito de "deslocamento" ao passar o mouse */
+}
+
+/* Conteúdo Principal */
+.conteudo {
+    margin-left: 245px; /* Espaço para a barra lateral */
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 245px); /* Faz o conteúdo ocupar o espaço restante */
+    min-height: 100vh;
+    overflow-y: auto; /* Permite rolagem vertical se o conteúdo for maior */
+}
+
+/* Estilo da imagem na barra lateral */
+.imagem-barra-principal {
+    position: absolute;
+    width: 150px;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    opacity: 0.7; /* Adiciona opacidade para não chamar tanta atenção */
+}
+
+/* Formulário de Cadastro de Produto */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Campo de Texto do Formulário */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botão de Salvar */
+button {
+    background-color: #0059b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d99; /* Cor de fundo mais escura */
+}
+
+/* Carrinho de Compras */
+#carrinho {
+    list-style-type: none;
+    padding: 0;
+}
+
+#carrinho li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Total */
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Efeito de Hover no Carrinho */
+#carrinho li:hover {
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+/* Estilos gerais para o conteúdo */
+#conteudo {
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 245px);
+    min-height: 100vh;
+}
+
+/* Estilo para a tabela de estoque */
+#tabelaEstoque {
+    width: 100%;
+    border-collapse: collapse; /* Para não deixar espaços entre as células */
+    margin-top: 20px;
+}
+
+/* Cabeçalho da tabela */
+#tabelaEstoque thead {
+    background-color: #003366; /* Cor de fundo mais escura para o cabeçalho */
+    color: white;
+}
+
+#tabelaEstoque th {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Células da tabela */
+#tabelaEstoque td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Borda leve nas células */
+    font-size: 14px;
+    color: #333; /* Cor do texto */
+}
+
+/* Cores alternadas nas linhas da tabela */
+#tabelaEstoque tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor clara para as linhas pares */
+}
+
+#tabelaEstoque tr:hover {
+    background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
+    cursor: pointer;
+}
+
+/* Estilo para o corpo da tabela */
+#tabelaEstoque tbody {
+    background-color: white; /* Cor de fundo para as linhas da tabela */
+}
+
+/* Ajustes de responsividade */
+@media screen and (max-width: 768px) {
+    #tabelaEstoque {
+        font-size: 12px; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    #tabelaEstoque th, #tabelaEstoque td {
+        padding: 8px; /* Ajusta o espaçamento das células em telas menores */
+    }
+}
+
+.principal{
+    position: fixed;
+    width: 200px;
+    height: auto;
+    top: 420px;
+}
